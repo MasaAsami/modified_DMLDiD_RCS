@@ -33,8 +33,6 @@ Modifying DMLDiD :Double/debiased machine learning for difference-in-differences
 
 <img width="611" alt="image" src="https://user-images.githubusercontent.com/16971400/199974792-be66c6e3-19b5-4982-aff5-4763674134ce.png">
 
-
-
 - l2k is the following ML model (Chang(2020) uses Lasso, but essentially any ML is OK)
   - Supervised label：(Ti−λ̂k)Yi
   - features：covariates X（X with arbitrary transformations as q）
@@ -51,7 +49,7 @@ Modifying DMLDiD :Double/debiased machine learning for difference-in-differences
   - Even if the covariates include time-dependent variables, a large number of time-dependent *time-independent interaction terms must be thrown in. Still, it is almost impossible to predict the label such that it flips 180 degrees positive or negative due to unobserved variables (for l2k, T is unobserved)
 - The (Ti-λ̂k) part need not be included in the prediction task. It should only be designed to estimate the latent outcome of Y
 
-![image](https://user-images.githubusercontent.com/16971400/198539758-ae7d2ccd-3e36-42e6-bf6d-5db2d0079dcd.png)
+<img src="https://github.com/MasaAsami/modified_DMLDiD_RCS/blob/main/fig/covariate_to_label.png" alt="l2k label plot" title="l2k label plot">
 
 - the notebook on this issue is [here](https://github.com/MasaAsami/modified_DMLDiD_RCS/blob/main/notebooks/Why_original_l2kmodel_is_wrong.ipynb)
 
@@ -77,7 +75,7 @@ The following simulation data were created:
 ## result: modified-DMLDiD is better than Chang(2020)
 - The notebook is [here](https://github.com/MasaAsami/modified_DMLDiD_RCS/blob/main/notebooks/DMLDiD_RCS_with_SIMDATA.ipynb).
 - ture ATT = 3
-![image](https://user-images.githubusercontent.com/16971400/198532873-c2a574f5-1625-4825-987c-3fdb9b5132ba.png)
 
 
+<img src="https://github.com/MasaAsami/modified_DMLDiD_RCS/blob/main/fig/simdata_result_unobserved_ps.png" alt="lasso dmldid" title="lasso dmldid">
 
