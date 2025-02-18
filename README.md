@@ -1,5 +1,4 @@
-# modifiedDMLDiD
-- Modifying DMLDiD :Double/debiased machine learning for difference-in-differences models.
+# Modified DMLDiD for Repeated Cross-Sections
 - Preprint: [Modified DMLDiD for Repeated Cross-Sections: a Note on Chang(2020)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5130468)
 
 # previous work
